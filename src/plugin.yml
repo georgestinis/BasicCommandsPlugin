@@ -1,0 +1,11 @@
+name: BasicCommandsPlugin
+version: 1.0
+api-version: 1.15
+author: Jaymun
+main: com.jaymun.BasicCommands
+description: Added basic functionalities like heal, teleport, home etc. 
+
+commands:
+    heal:
+        usage: /<command>
+    

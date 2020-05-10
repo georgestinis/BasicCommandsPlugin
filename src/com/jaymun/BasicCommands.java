@@ -1,6 +1,9 @@
 package com.jaymun;
 
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.jaymun.commands.HealCommand;
 
 public class BasicCommands extends JavaPlugin{
 	private static BasicCommands instance;
@@ -16,6 +19,7 @@ public class BasicCommands extends JavaPlugin{
 	@Override
 	public void onEnable() {
 		instance = this;
+		instance.getCommand("heal").setExecutor((CommandExecutor)new HealCommand());
 	}
 	
 	@Override
