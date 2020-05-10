@@ -18,21 +18,16 @@ public class HealCommand implements CommandExecutor{
 	private boolean p_not_found;
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		System.out.println("Mphka");
 		if (sender instanceof Player) {
 			Player p = (Player)sender;
 			if (args.length == 0) {
-				System.out.println("Mphka 1");
-				p.setHealth(p.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue());
-				p.setFoodLevel(20);
+				healPlayer(p);
 			}
 			else if (args[0].equalsIgnoreCase("@a")){
-				System.out.println("Mphka 2");
 				Collection<? extends Player> players = plugin.getServer().getOnlinePlayers();
 				healEveryone(players);
 			}
 			else {
-				System.out.println("Mphka 3");
 				Collection<? extends Player> players = plugin.getServer().getOnlinePlayers();
 				for (String arg : args) {
 					p_not_found = true;					
