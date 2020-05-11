@@ -8,4 +8,6 @@ description: Added basic functionalities like heal, teleport, home etc.
 commands:
     heal:
         usage: /<command>
+    spawn:
+        usage: /<command>    
     
